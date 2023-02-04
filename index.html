@@ -4,40 +4,132 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta name="description" content="">
+    <meta name="description" content="Rhine Ho  animation website profoilo Home page.">
+    <meta name="description" content="Blender, Gsap, HTML, CSS, SASS, JavaScript, jQuery, React, ">
+    <meta name="description" content="SEO, RWD, API, ">
+    <meta property="og:title" content="Rhine profoilo">
+    <meta property="web:title" content="The multiple possibilty of life.">
 
-    <link rel="stylesheet" href="">
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Bakbak+One&family=Fredoka+One&family=Orbitron&family=Raleway:wght@100;400&display=swap" rel="stylesheet">    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Fredoka+One&family=Raleway:wght@100;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="/Component/nav.css">
+    <link rel="stylesheet" href="/Component/cursor.css">
 
-
-    <title>Document</title>
+    <title>Rhine profoilo Home page.</title>
 </head>
 <body>
+        <!--add cursor-->
+        <section class="Front-page">
 
-    <header>
+                <div class="logo">
+                        <img src="./Doc/egg.png" alt="egg">
+                        <h1>Rhine's profoilo.</h1>
+                </div>
+        <nav>
+                <!--navbar-->
 
-    </header>
-    <main>
+                <div class="links">
+                        <a href="#" data-content="The beginning">Home</a>
+                        <a href="#" data-content="Curious?">About</a>
+                        <a href="#" data-content="I got game">Skills</a>
+                        <a href="#Works" data-content="playground">Works</a>
+                        <a href="#contact-text" data-content="Don't hesitate">Contact</a>
+                </div>
 
-        <section>
+                <div id="nav-icon2">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+        </nav>
+
+       
+                <div id="namecard" class="namecard">
+                        <h2>Scroll down.</h2>
+                        <h3>view more.</h3>
+
+                        <video autoplay muted src="./Doc/namecard.mkv" type="video/x-matroska"alt="namecard animation"></video>  
+                </div>
+
+               
+                
+                <div class="ghostegg">
+                        <div class="cloud">
+                                <img class="mask" src="./Doc/cloud.png" alt="mask">
+                                <img class="mask2" src="./Doc/cloud2.png" alt="mask">
+
+                        </div>
+                        <img class="main"src="./Doc/egg.png" alt="ghostegg">
+                </div>
+        </section>
+
+        <!--About part-->
+        <section class="introduction">
+
+               
+
+                <div class="wrapper">
+                        <div class="">
+
+                        </div>
+
+
+                </div>
+
+            <canvas class="canvas"></canvas>
+
+            <div id="contact-text">
+            <button class="contact-text"><a href="mailto:mao07033@gmail.com"> Contact Me.</a></button>
+            </div>
+
 
         </section>
 
-        <section>
 
+        <section class="more-info">
+                <footer>
+                <div id="Works">
+
+                        <div class="app">
+                        </div>
+
+                </div>
+                </footer>
         </section>
 
-    </main>
-    
-    <footer>
+        <!--page loader-->
 
-    </footer>
-
-    <script>
+        <div class="loading__wrapper">
+                <div class="loader--text">Loading...</div>
+                <div class="loader">
+                        <span></span>
+                </div>
+        </div>
         
-    </script>
+
+            <!--Gsap main-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js" 
+            integrity="sha512-f8mwTB+Bs8a5c46DEm7HQLcJuHMBaH/UFlcgyetMqqkvTcYg4g5VXsYR71b3qC82lZytjNYvBj2pf0VekA9/FQ==" 
+            crossorigin="anonymous" 
+            referrerpolicy="no-referrer">
+        </script>
+            <!--Gsap ScrollTrigger-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js" 
+            integrity="sha512-A64Nik4Ql7/W/PJk2RNOmVyC/Chobn5TY08CiKEX50Sdw+33WTOpPJ/63bfWPl0hxiRv1trPs5prKO8CpA7VNQ==" 
+            crossorigin="anonymous" 
+            referrerpolicy="no-referrer">
+        </script>
+      
+        <script src="./app.js"></script>
+        
 </body>
-    <script src="app.js"></script>
 
 </html>
