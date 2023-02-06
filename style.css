@@ -4,25 +4,27 @@
     box-sizing: border-box;
 }
 
-html, body{
-    height: 100%;
-}
-
 body {
-    position: relative;
     overflow-x: hidden;
-	justify-content: center;
-	align-items: center;
+    display: flex;
+    flex-direction: column;
 	background: var(--background-color);
 }
 
 :root {
+    --color:white;
+
     --background-color:rgba(0, 0, 0, 0.787);
     --second-bg-color:radial-gradient(ellipse farthest-corner at left,#071a35c0 70%,white ,transparent);
 
     --main-color:#59a4e9;
     --secondary-color:#1b1b1b;
-    
+
+    --f-text-shadow: 0px 4px 12px rgba(0, 0, 0, 0.9);
+    --s-text-shadow: 0px 4px 12px rgba(226, 229, 224, 0.5);
+    --th-text-shadow: 0px 4px 12px rgba(101, 229, 21, 0.9);
+    --fo--box-shadow: 4px 4px 12px rgba(7, 183, 242, 0.654);
+
     --card-width: 200px;
 	--card-height: 300px;
 
@@ -30,11 +32,39 @@ body {
 	--card-transition-easing: ease;
 }
 
+a{
+    color: white;
+    text-decoration: none;
+}
+
+/*icon*/
+
+.logo{
+    position: absolute;
+    width: 20vw;
+    left: 1rem;
+    top: 5px;
+    display: grid;
+    font-family: 'Fredoka One', sans-serif;
+    z-index: 10;
+    text-shadow: var(--f-text-shadow);
+    color: white;
+}
+
+.logo img{
+    width: 8rem;
+}
+
+.logo h1 {
+    font-size: 1rem;
+    margin-left: 1rem;
+    color: white;
+    text-shadow: var(--s-text-shadow);
+}
 
 /*nav bar*/
 
 nav {
-    position:relative;
     font-family: 'Fredoka One', sans-serif;
     /*background:radial-gradient(circle farthest-corner at left,black 70%,white ,transparent);*/
 }
@@ -58,79 +88,41 @@ nav {
     justify-content: space-evenly;
     transform: translateX(100%);
     font-family: 'Orbitron', sans-serif;
-    z-index: 10;
-}
-
-.links a {
-    color: white;
     font-size: 1.5rem;
-    text-shadow: 0px 4px 12px rgba(226, 229, 224, 0.9);
-    opacity: 0;
-}
-
-/*icon*/
-
-.logo {
-    position: fixed;
-    width: 20vw;
-    left: 1rem;
-    top: 5px;
-    display: grid;
-    font-family: 'Fredoka One', sans-serif;
     z-index: 10;
-    text-shadow: 0px 4px 12px rgba(0, 0, 0, 0.9);
-}
-
-.logo h1 {
-    font-size: 1rem;
-    margin-left: 1rem;
-    color: white;
-    text-shadow: 0px 4px 12px rgba(226, 229, 224, 0.5);
-}
-
-.logo img {
-    width: 6rem;
 }
 
 /*Front-page*/
 
-.namecard{
+.namecard {
+    position: relative;
+    display: flex;
     height: 100vh;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
-.namecard  video {
-    height: 100vh;  
-    width: 100% ;
-    top: 0;
-    position: fixed;
+.namecard video {
+    position: absolute;
+    height: 100vh;
+    width: 100%;
     pointer-events: none;
     object-fit: cover;
     overflow: hidden;
 }
 
-.namecard h2,h3 {
+.namecard h2,h3,span{
     position: absolute;
     z-index: 2;
-    top: 80%;
+    top: 85%;
     left: 50%;
     transform: translate(-50%, -50%);
     color: rgb(186, 177, 177);
     text-shadow: 0px 4px 12px rgba(101, 229, 21, 0.9);
     font-family: 'Orbitron', sans-serif;
-    padding: 0.1rem;
+    padding: 0.2rem;
 }
-
-.namecard h2,h3 ::after{
-    content: '';
-    display: block;
-    position: absolute;
-    z-index: 2;
-    border-top: 5px solid #ccc;
-    border-bottom: 2px solid #ccc;
-    
-}
-
-/*add arrow animation*/
 
 .namecard h2 {
     font-size: 3.2rem; 
@@ -141,64 +133,54 @@ nav {
     margin: 4rem 0rem;
 }
 
-.ghostegg {
+.ghostegg,.main {
     position: fixed;
+    margin: 0px 0px;
+    width: 35rem;
     z-index: 9;
-    opacity: 0;
-    pointer-events: none;
-    top: -20rem;
-    left: -8rem;
-    width: 100%;
 }
-
-.main{
-    position: fixed;
-    width:800px;
-    top:-10px;
-    left: 35rem;
-}
-
-.mask{
-    border-radius: 1.5rem;
-    width: 2000px;
-}
-
-.mask2{
-    position: fixed;
-    left: 8rem;
-    top: 20rem;
-}
+/*add arrow animation*/
 
 /*second page*/
 
-.canvas {
-    z-index: 3;
+/*.intro{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}*/
+
+canvas{
+    position: relative;
+    display: flex;
     height: 100vh;
-    width: 100vw;
-    object-fit: cover; /*make image fit in different siz browser*/
+    width: 100%;
+    object-fit: cover;
 }
 
-
-.contact-text {
-    background-color: var(--main-color);
-    position: fixed;
+.cloud{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
     z-index: 10;
-    padding: 1.5rem;
-    font-size: 1rem;
-    border-radius: 1.5rem;
-    box-shadow: 4px 4px 12px rgba(7, 183, 242, 0.654);
-    margin: 2rem;
-    right: 50%;
-    bottom: 50%;
-    transform: translate(-50%, -50%);
-    color: var(--secondary-color);
-    font-family: 'Fredoka One', sans-serif;
-    opacity: 0;
-} 
+    width: 100%;
+}
 
-.contact-text a{
-    color:white;
-    text-decoration: none;
+.mask{
+    transform: translateX(100%);
+    position: absolute;
+    left: 0;
+    top: -20rem;
+    width: 1000px;
+}
+.mask2{
+    transform: translateX(-100%);
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 1300px;
 }
 
 /*third page*/
