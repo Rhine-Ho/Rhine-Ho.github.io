@@ -1,11 +1,12 @@
 //add cursor function
 
 // Front-page fade in Effect
+
 gsap.fromTo(
     ".namecard h2", 
         { opacity: 0 }, 
             { opacity: 1, 
-                duration: 1, 
+                duration: 5, 
                 delay: 3.5,
             });
 
@@ -13,12 +14,56 @@ gsap.fromTo(
     ".namecard h3",
         { opacity: 0}, 
             { opacity: 1, 
-                duration: 1, 
+                duration: 5, 
                 delay: 3.7, 
             });
 
 
      // make second scroll animation looks better 
+     //task: still looks weird, make it better    
+
+gsap.fromTo(
+    " .mask",
+    { opacity: 0,
+        x: '100%',
+    },
+        { 
+        opacity: 0.8,
+            x: '70%',
+        scrollTrigger:{
+            scrub: "true",
+            start:"0%",
+            end: "50%",
+            //markers: true,
+            },
+        onComplete: () => {
+            gsap.to(".mask", 
+            { opacity: 0 });
+        },
+           
+    }
+);
+gsap.fromTo(
+    ".mask2",
+    { opacity: 0,
+        x: '-20%',
+    },
+        { 
+        opacity: 0.8,
+            x: '10%',
+        scrollTrigger:{
+            scrub: "true",
+            start:"0%",
+            end: "50%",
+            //markers: true,
+            },
+        onComplete: () => {
+            gsap.to(".mask2", 
+            { opacity: 0 });
+        },
+           
+    }
+);
 
 
 gsap.fromTo(
@@ -29,26 +74,7 @@ gsap.fromTo(
         scrollTrigger:{
             scrub: "true",
             start:"0%",
-            end: "100%",
-            //markers: true,
-        },
-        onComplete: () => {
-            gsap.to(".ghostegg", 
-            { opacity: 0 });
-        },
-       
-    }
-);
-
-gsap.fromTo(
-    ".cloud img",
-    { opacity: 0 },
-    { 
-        opacity: 1,
-        scrollTrigger:{
-            scrub: "true",
-            start:"50%",
-            end: "100%",
+            end: "30%",
             //markers: true,
         },
         onComplete: () => {
@@ -72,7 +98,7 @@ const frameCount = 646;
 
 const currentFrame = (index) => `./file/${(index + 1).toString()}.jpg`;
 const images = [];
-let ball = {frame : 0}
+let egg = {frame : 0}
 
 for (let i = 0; i < frameCount; i++) {
     const img = new Image();
@@ -82,7 +108,7 @@ for (let i = 0; i < frameCount; i++) {
 //console.log(images);
 
 //
-gsap.to(ball, {
+gsap.to(egg, {
     frame: frameCount - 1,
     snap: "frame",
     ease: "none",
@@ -103,8 +129,9 @@ gsap.fromTo(
         opacity: 1,
         scrollTrigger:{
             scrub: "true",
-            start:"570%",
-            end: "700%",
+            start:"70%",
+            end: "85%",
+            //markers: true,
         },
         onComplete: () => {
             gsap.to(".contact-text", { opacity: 0 });
@@ -120,7 +147,7 @@ function render() {
     context.canvas.height = images[0].height;
 
     context.clearRect(0, 0, canvas.width, canvas.height);
-    context.drawImage(images[ball.frame], 0, 0);
+    context.drawImage(images[egg.frame], 0, 0);
 }
 
 //navbar function
