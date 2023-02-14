@@ -12,14 +12,14 @@
     <meta name="description" content="SEO, RWD, API, ">
     <meta property="og:title" content="Rhine profoilo">
 
-    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Bakbak+One&family=Fredoka+One&family=Orbitron&family=Raleway:wght@100;400&display=swap" rel="stylesheet"> 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Fredoka+One&family=Raleway:wght@100;400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./style.css">
-    <link rel="stylesheet" href="/Component/nav.css">
-    <link rel="stylesheet" href="/Component/cursor.css">
+    <link rel="stylesheet" href="./src/Component/nav.css">
 
     <title>Rhine profoilo Home page.</title>
 </head>
@@ -36,12 +36,12 @@
                 <nav>
                         <!--navbar-->
 
-                        <div class="links right-page">
+                        <div class="links">
                                 <a href="#" data-content="The beginning">Home</a>
                                 <a href="#" data-content="Curious?">About</a>
                                 <a href="#" data-content="I got game">Skills</a>
-                                <a href="#Works" data-content="playground">Works</a>
-                                <a href="#contact-text" data-content="Don't hesitate">Contact</a>
+                                <a href="#" data-content="playground">Works</a>
+                                <a href="#" data-content="Don't hesitate">Contact</a>
                         </div>
 
                         <div id="nav-icon2">
@@ -58,8 +58,8 @@
                         <div id="namecard" class="namecard">
                                 <h2>Scroll down.</h2>
                                 <h3>view more.</h3>
-                                <span class="arrow">iiiii</span>
-
+                                <span class="arrow"> >>> ></span>
+                                
                                 <video autoplay muted src="./Doc/namecard.mkv" type="video/x-matroska"alt="namecard animation"></video>  
                                 <div class="ghostegg">
                                         <img class="main"src="./Doc/egg.png" alt="ghostegg">
@@ -73,62 +73,120 @@
                 <!--About part-->
                 <section class="intro">
 
-                        <div class="cloud">
-                                <img class="mask" src="./Doc/cloud3.png" alt="mask">
+                        <div class="wrapper">
+                                <div class="cloud">
+                                        <img class="mask" src="./Doc/cloud3.png" alt="mask">
 
-                                <img class="mask2" src="./Doc/cloud2.png" alt="mask">                        
-                        </div>
+                                        <img class="mask2" src="./Doc/cloud2.png" alt="mask"> 
+                                        
+                                        <img class="mask3" src="./Doc/cloud4.png" alt="mask">
+                                </div>
 
-                        <div class="wrapper right-page">
-                                <div class="">
+                        
+
+                                <div class="button-wrapper">  
+                                        <img class="on" src="./Doc/cloud4.png" alt="mask"></img>
+
+                                        <button class="o">About.
+                                                <div class="info-card">
+                                                        <p class="icard">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatem consequatur delectus non ipsa, praesentium eos, quae officia molestias, dolorum qui maiores commodi quis. Aut velit laboriosam expedita iste dignissimos distinctio.</p>
+                                                        <p class="icard">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatem consequatur delectus non ipsa, praesentium eos, quae officia molestias, dolorum qui maiores commodi quis. Aut velit laboriosam expedita iste dignissimos distinctio.</p>
+                                                </div>
+                                        </button>
+                                </div>
+
+                                <div class="about-info">
 
                                 </div>
                         </div>
 
-                       
-                                <canvas class="canvas"></canvas>
-
-                        <div id="contact-text">
-                                <button class="contact-text"><a href="mailto:mao07033@gmail.com"> Contact Me.</a></button>
-                        </div>
+                        <canvas class="canvas"></canvas>
 
                 </section>
-
+        
         </main>
 
         <footer>
                 <section class="more-info">
                 
                         <div id="Works">
-                                
+
+                                <button class="contact-text"><a href="mailto:mao07033@gmail.com"> Contact Me.</a></button>
+                                <img class="water" src="./Doc/water.png" alt="water" />
+
+
+                                <ul class="card-wrapper">
+
+                                        <li class="card">                                                  
+                                                <span><a href="#">EXPLORE</a></span>
+
+                                        </li>
+                                        <li class="card">
+                                                <span><a href="#">EXPLORE</a></span>
+                                        </li>
+
+
+                                        <li class="card">
+                                                <span><a href="#">EXPLORE</a></span>
+                                        </li>
+
+                                        <li class="card">
+                                                <span><a href="#">EXPLORE</a></span>
+                                        </li>
+
+                                        <li class="card">
+                                                <span> <button class="o"><a href="#">EXPLORE</a> </button></span>
+                                               
+                                        </li>
+                                        
+                                </ul>
                               
 
                         </div>
-
-                
+                        
                 </section>
         </footer>
         <!--page loader-->
+                <div id="wrapper">
+                        <section id="content">
+                                <section class="spacer"></section>
+                                        <div class="title">
+                                                <h1 class="bottom">THE END.</h1>
+                                                <h1 class="bottom">THE END.</h1>
+                                                <h1 class="bottom">THE END.</h1>
+                                        </div>
+                                <section class="spacer"></section>
+                        </section>
+                </div>
 
-                <div class="loading__wrapper">
+                <div class="loading-wrapper">
                         <div class="loader--text">Loading...</div>
                         <div class="loader">
                                 <span></span>
                         </div>
                 </div>
+
+
         
 
             <!--Gsap main-->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js" 
-            integrity="sha512-f8mwTB+Bs8a5c46DEm7HQLcJuHMBaH/UFlcgyetMqqkvTcYg4g5VXsYR71b3qC82lZytjNYvBj2pf0VekA9/FQ==" 
-            crossorigin="anonymous" 
-            referrerpolicy="no-referrer">
-        </script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js" 
+                integrity="sha512-f8mwTB+Bs8a5c46DEm7HQLcJuHMBaH/UFlcgyetMqqkvTcYg4g5VXsYR71b3qC82lZytjNYvBj2pf0VekA9/FQ==" 
+                crossorigin="anonymous" 
+                referrerpolicy="no-referrer">
+            </script>
+            
             <!--Gsap ScrollTrigger-->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js" 
             integrity="sha512-A64Nik4Ql7/W/PJk2RNOmVyC/Chobn5TY08CiKEX50Sdw+33WTOpPJ/63bfWPl0hxiRv1trPs5prKO8CpA7VNQ==" 
             crossorigin="anonymous" 
             referrerpolicy="no-referrer">
+        </script>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollToPlugin.min.js" 
+                integrity="sha512-tQFq+nb/TSS648SDzWbSj0A67t4I1PFzR0U6Oi/yEYFyUbAIwg74SOCbr7t2X1Rn+iln7sYwfh8y+z7p0gddOw==" 
+                crossorigin="anonymous" 
+                referrerpolicy="no-referrer">
         </script>
       
         <script src="./app.js"></script>
