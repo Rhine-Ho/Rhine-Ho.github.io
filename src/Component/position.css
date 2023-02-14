@@ -1,0 +1,44 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.Front-page, .intro, .more-info{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+a{
+    position: relative;
+}
+
+.xlinks{
+    position: absolute;
+    left: 0;
+    top: 0;
+    transform: translateX(100%);
+}
+
+.logo-fixed-ltr{
+    position: fixed;
+    direction: ltr;
+
+}
+
+.logo-fixed-rtl{
+    position: fixed;
+    direction: rtl;
+}
+
+.logo-left{
+    position: absolute;
+    direction: ltr;
+
+}
+
+.logo-right{
+    position: relative;
+    direction: rtl;
+}
